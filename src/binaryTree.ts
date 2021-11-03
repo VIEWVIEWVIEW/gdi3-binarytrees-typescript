@@ -66,6 +66,20 @@ class BinaryTree {
     return new Result(z, true, comparisons);
   }
 
+
+  searchKey(x: Node, key: number): Result {
+    let comparisons = 0;
+    while (x !== null && key !== x.key) {
+      if (key < x.key) {
+        x = x.left;
+        comparisons++;
+      } else {
+        x = x.right;
+        comparisons++;
+      }
+    }
+    return new Result(x, key === x.key, comparisons);
+  }
 };
 
 

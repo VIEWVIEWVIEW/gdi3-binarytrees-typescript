@@ -45,6 +45,7 @@ class BinaryTree {
         comparisons++;
       } else {
         x = x.right;
+        comparisons++;
       }
     }
 
@@ -53,6 +54,7 @@ class BinaryTree {
 
     if (y === null) {
       this.root = z;
+      comparisons++;
     } else if (key < y.key) {
       y.left = z;
       comparisons++;
@@ -60,7 +62,7 @@ class BinaryTree {
       y.right = z;
       comparisons++;
     }
-    
+
     return new Result(z, true, comparisons);
   }
 

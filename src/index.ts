@@ -8,4 +8,5 @@ const result2 = binaryTree.insertKey(20, 20);
 
 const result3 = binaryTree.insertKey(5, 20);
 
-console.log(result3);
+
+console.log(result2);
